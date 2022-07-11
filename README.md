@@ -26,3 +26,5 @@
 ![Simulator Screen Shot - iPhone 11 - 2022-07-11 at 18 34 48](https://user-images.githubusercontent.com/71163980/178280494-12e47726-e449-44c3-ba22-403978cf0159.png)
 
 ![Simulator Screen Shot - iPhone 11 - 2022-07-11 at 18 34 53](https://user-images.githubusercontent.com/71163980/178280505-81ea4708-512b-4a29-8064-0ec826ce16a5.png)
+
+##### 참고: https://yagom.net/courses/ios-starter-uikit/
