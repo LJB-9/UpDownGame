@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="bHD-5L-YDz">
+                                <rect key="frame" x="87" y="192" width="722" height="31"/>
+                                <color key="tintColor" systemColor="linkColor"/>
+                                <color key="minimumTrackTintColor" systemColor="systemGray2Color"/>
+                                <color key="maximumTrackTintColor" systemColor="secondaryLabelColor"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pny-h3-Yai"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkg-B2-Dk3">
+                                <rect key="frame" x="410" y="238" width="76" height="52.5"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark.seal.fill" catalog="system" title="">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpHitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8N7-Mr-nyG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVi-UQ-wPe">
+                                <rect key="frame" x="779" y="21.5" width="53" height="34"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="memories" catalog="system" title="">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    </preferredSymbolConfiguration>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8Y-IC-raC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the Random Number!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbP-Nk-VLo">
+                                <rect key="frame" x="260" y="20" width="376" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u41-aQ-Dr2">
+                                <rect key="frame" x="64" y="198.5" width="9" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGc-RL-GYb">
+                                <rect key="frame" x="823" y="198.5" width="53" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrZ-v7-q0x">
+                                <rect key="frame" x="437" y="368" width="22.5" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gu-Qq-ZBn">
+                                <rect key="frame" x="440" y="159" width="16" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKO-yl-n6H">
+                                <rect key="frame" x="64" y="21.5" width="50.5" height="34"/>
+                                <color key="tintColor" systemColor="systemMintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    </preferredSymbolConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aaf-av-8Sc"/>
+                                    <segue destination="tCD-N0-Irp" kind="presentation" modalTransitionStyle="crossDissolve" id="bgq-u8-73z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2G-fJ-bau">
+                                <rect key="frame" x="64" y="339" width="39" height="34"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="info" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    </preferredSymbolConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yzi-32-eD4"/>
+                                    <segue destination="Bwm-BB-u2y" kind="presentation" id="a7A-0o-U9M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G2G-fJ-bau" secondAttribute="bottom" constant="20" id="4yx-wL-xEy"/>
+                            <constraint firstItem="bHD-5L-YDz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Vb-xF-Mqv"/>
+                            <constraint firstItem="MVi-UQ-wPe" firstAttribute="centerY" secondItem="bKO-yl-n6H" secondAttribute="centerY" id="C6Q-NN-2fv"/>
+                            <constraint firstItem="bHD-5L-YDz" firstAttribute="leading" secondItem="u41-aQ-Dr2" secondAttribute="trailing" constant="16" id="DfB-ms-aSN"/>
+                            <constraint firstItem="WbP-Nk-VLo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E9c-B0-9r4"/>
+                            <constraint firstItem="WbP-Nk-VLo" firstAttribute="centerY" secondItem="bKO-yl-n6H" secondAttribute="centerY" id="H8O-Bt-I0c"/>
+                            <constraint firstItem="Pkg-B2-Dk3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I6B-Di-aHY"/>
+                            <constraint firstAttribute="trailing" secondItem="vGc-RL-GYb" secondAttribute="trailing" constant="20" id="Nsk-Ff-Ttu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VrZ-v7-q0x" secondAttribute="bottom" constant="8" id="W8B-hk-Fze"/>
+                            <constraint firstItem="bHD-5L-YDz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dNl-rB-a7b"/>
+                            <constraint firstItem="bHD-5L-YDz" firstAttribute="centerY" secondItem="u41-aQ-Dr2" secondAttribute="centerY" id="dlf-3a-s8a"/>
+                            <constraint firstItem="vGc-RL-GYb" firstAttribute="leading" secondItem="bHD-5L-YDz" secondAttribute="trailing" constant="16" id="fYG-aA-Ojg"/>
+                            <constraint firstItem="Pkg-B2-Dk3" firstAttribute="top" secondItem="bHD-5L-YDz" secondAttribute="bottom" constant="16" id="gLg-s4-ghf"/>
+                            <constraint firstItem="4gu-Qq-ZBn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jKL-sq-q9t"/>
+                            <constraint firstItem="VrZ-v7-q0x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mgh-1W-46o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MVi-UQ-wPe" secondAttribute="trailing" constant="20" id="oAD-pb-zwA"/>
+                            <constraint firstItem="vGc-RL-GYb" firstAttribute="centerY" secondItem="u41-aQ-Dr2" secondAttribute="centerY" id="u35-c0-xTg"/>
+                            <constraint firstItem="bKO-yl-n6H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ulD-vU-zjv"/>
+                            <constraint firstItem="u41-aQ-Dr2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uuS-r0-1oZ"/>
+                            <constraint firstItem="G2G-fJ-bau" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wLY-pD-EMQ"/>
+                            <constraint firstItem="WbP-Nk-VLo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wb1-Jf-I1E"/>
+                            <constraint firstItem="bHD-5L-YDz" firstAttribute="top" secondItem="4gu-Qq-ZBn" secondAttribute="bottom" constant="16" id="y9r-yd-hIF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="maximumValueLable" destination="vGc-RL-GYb" id="5MT-7x-Q42"/>
+                        <outlet property="minimumValueLabel" destination="u41-aQ-Dr2" id="Jg2-VP-aKW"/>
+                        <outlet property="slider" destination="bHD-5L-YDz" id="Ytr-65-poO"/>
+                        <outlet property="sliderValueLabel" destination="4gu-Qq-ZBn" id="XcK-VV-Pck"/>
+                        <outlet property="tryCountLabel" destination="VrZ-v7-q0x" id="UGz-hK-1ED"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-176" y="-104"/>
+        </scene>
+        <!--Credit View Controller2-->
+        <scene sceneID="dSh-Q6-cOx">
+            <objects>
+                <viewController id="Bwm-BB-u2y" customClass="CreditViewController2" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JNR-f9-Ufe">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqE-XV-WZB">
+                                <rect key="frame" x="64" y="20" width="80" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.rectangle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                    <color key="baseForegroundColor" systemColor="systemGray6Color"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpDismissButton2:" destination="Bwm-BB-u2y" eventType="touchUpInside" id="vZJ-jU-awg"/>
+                                    <action selector="touchUpDismissButton:" destination="tCD-N0-Irp" eventType="touchUpInside" id="c0G-hO-4Gm"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Hdw-rN-G0p">
+                                <rect key="frame" x="64" y="79" width="244" height="256"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cl3-QM-JEL">
+                                <rect key="frame" x="407" y="50" width="425" height="315"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1647058874" green="0.36470589040000001" blue="0.62352943419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <string key="text">
+
+
+name : Lee JunBeom
+
+contacts : 
+https://github.com                 
+wns3884@naver.com</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PiK-tv-rRy"/>
+                        <color key="backgroundColor" red="0.1647058874" green="0.36470589040000001" blue="0.62352943419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Hdw-rN-G0p" firstAttribute="centerY" secondItem="JNR-f9-Ufe" secondAttribute="centerY" id="1rv-fG-hZQ"/>
+                            <constraint firstItem="Hdw-rN-G0p" firstAttribute="leading" secondItem="PiK-tv-rRy" secondAttribute="leading" constant="20" id="RAL-lf-SLy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPd-PJ-P3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-176" y="690"/>
+        </scene>
+        <!--Credit View Controller-->
+        <scene sceneID="MHa-YV-sCW">
+            <objects>
+                <viewController id="tCD-N0-Irp" customClass="CreditViewController" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TNK-rk-2cO" customClass="cre">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDs-yp-LOV">
+                                <rect key="frame" x="64" y="20" width="80" height="51"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.rectangle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                    <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpDismissButton:" destination="tCD-N0-Irp" eventType="touchUpInside" id="M7y-hZ-yWU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-Zl-hAI">
+                                <rect key="frame" x="144" y="100" width="608" height="218"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <string key="text">게임 설명 :  1부터 30까지의 임의의 숫자를 사용자가 알아맞히는 게임이다. 
+
+슬라이더를 움직여 값을 조정한 다음 원하는 값에서 체크 버튼을 눌러 정답을 확인한다. 만약 사용자가 정답을 맞히면 You HIT!!이라는 문구가 나오고 만약 5번 안의 정답을 맞히지 못할 경우 You lose...라는 문구가 나온다. </string>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pEy-Hd-UaZ"/>
+                        <color key="backgroundColor" systemColor="tintColor"/>
+                        <color key="tintColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="pEy-Hd-UaZ" firstAttribute="trailing" secondItem="P0R-Zl-hAI" secondAttribute="trailing" constant="100" id="Hgh-AH-MHy"/>
+                            <constraint firstItem="P0R-Zl-hAI" firstAttribute="top" secondItem="pEy-Hd-UaZ" secondAttribute="top" constant="100" id="RYX-Wr-mCX"/>
+                            <constraint firstItem="P0R-Zl-hAI" firstAttribute="leading" secondItem="pEy-Hd-UaZ" secondAttribute="leading" constant="100" id="gzp-Z9-Spv"/>
+                            <constraint firstItem="pEy-Hd-UaZ" firstAttribute="bottom" secondItem="P0R-Zl-hAI" secondAttribute="bottom" constant="75" id="sUW-EW-M8B"/>
+                            <constraint firstItem="QDs-yp-LOV" firstAttribute="top" secondItem="pEy-Hd-UaZ" secondAttribute="top" constant="20" id="uLO-SK-tES"/>
+                            <constraint firstItem="QDs-yp-LOV" firstAttribute="leading" secondItem="pEy-Hd-UaZ" secondAttribute="leading" constant="20" id="wZT-mt-NOX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKz-Gp-euU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463.39285714285711" y="-104.34782608695653"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="244" height="256"/>
+        <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
+        <image name="info" catalog="system" width="93" height="128"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="memories" catalog="system" width="128" height="110"/>
+        <image name="xmark.rectangle" catalog="system" width="128" height="93"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
